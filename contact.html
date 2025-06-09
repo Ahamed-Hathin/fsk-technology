@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+   
+  <!--------------------------Navbar------------------------------------>
+   
+   <header class="sticky">
+     <a href="index.html"><img src="images/fsk-logo1.png" class="brand" alt=""></a>
+        
+
+
+        <nav class="nav-bar1">
+            <ul class="nav-bar">
+
+                <li class="nav"><a href="index.html" class="home">Home</a></li>
+                <li class="nav"><a href="services.html" class="service">Services</a></li>
+                <li class="nav"><a href="about.html" class="about-us">About Us</a></li>
+                <li class="nav"><a  href="contact.html" class="contact-us">Contact Us</a></li>
+            </ul>
+
+<!----------------------------MENU BAR!------------------------------------>
+
+            <div class="menu-bar" onclick="showNavbar()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </nav>
+
+
+
+    </header>
+
+    <div class="side-navbar" onclick=" closeNavbar()">
+       <!-- <i class="fa-solid fa-xmark"></i> -->
+        <p class="side-nav"><a href="index.html">Home</a></p>
+        <p class="side-nav"><a href="services.html">Services</a></p>
+        <p class="side-nav"><a href="about.html">About Us</a></p>
+        <p class="side-nav contact-nav"><a>Contact Us</a></p>
+    </div>
+
+
+
+
+
+
+<!--------Contact------>
+
+           
+<div class="cantact-container">
+    <div class="contact-box">
+        <div class="cantact-right">
+            <h2>Contact Us</h2>
+            <form onsubmit="sendwhatsapp(); return false;">
+            <Input type="text"  class="field name" placeholder="Your Name"   required>
+            <Input type="email" name="email" inputmode="email" class="field email" placeholder="Your Email"  required>
+            <Input type="number" inputmode="numeric" class="field phone" placeholder="Your Phone"  required>
+            <textarea class="field area message" placeholder="Message"  required></textarea>
+            <button type="submit" class="contact-btn">send</button> 
+        </form>
+        </div>
+    </div>
+</div> 
+
+
+
+<script>
+    function sendwhatsapp(){
+        var phonenumber = "+919791701565";
+
+        var name = document.querySelector('.name').value;
+        var email = document.querySelector('.email').value;
+        var phone = document.querySelector('.phone').value;
+        var message = document.querySelector('.message').value;
+
+        var url = "https://wa.me/" + phonenumber + "?text=" +
+        encodeURIComponent ("*Name :* " + name+"\n"+
+        +"*Email :* " +email+"\n"+
+        +"*Phone :* " +phone+"\n"+
+        +"*Message :* " +message);
+
+             window.open(url, '_blank').focus();
+
+    }
+</script>
+
+
+     <!----footer------>
+ 
+<footer class="footer">
+    <div class="footer-container">
+        <div class="foot-row">
+            <div class="foot-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a>About Us</a></li>
+                    <li><a>Our Services</a></li>
+                    <li><a>Privacy Polices</a></li>
+                    <li><a>Team</a></li>
+
+
+                </ul>
+            </div>
+            <div class="foot-col">
+                <h4>Reach Us</h4>
+                <ul>
+                    <li><a>+91 8825783363</a></li>
+                    <li><a>info@fsktechnologies.com</a></li>
+
+                </ul>
+            </div>
+            <div class="foot-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a>Home</a></li>
+                    <li><a>About Us</a></li>
+                    <li><a>Services</a></li>
+                    <li><a>Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="foot-col">
+                <h4>Follow As</h4>
+                <div class="social-links">
+                   <a><i class="fa-brands fa-facebook-f"></i></a>
+                   <a><i class="fa-brands fa-twitter"></i></a>
+                   <a><i class="fa-brands fa-whatsapp"></i></a>
+                   <a><i class="fa-brands fa-google"></i></a>
+
+                   
+                </div>
+            </div>
+           </div>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+            <script type="text/javascript">
+
+//------------nav scroll-----------------------------------/
+
+                window.addEventListener("scroll", function () {
+                    var header = document.querySelector("header");
+                    header.classList.toggle("sticky", window.scrollY > 0);
+                })
+
+
+//---------------sidenav appear------------------------/
+
+
+                var sidenavbar = document.querySelector(".side-navbar")
+                var menubar=document.querySelector(".menu-bar")
+
+                function showNavbar() {
+                    menubar.style.display = "none"
+                }
+
+                function showNavbar() {
+                    sidenavbar.style.display = "block"
+                }
+
+                function closeNavbar() {
+                    sidenavbar.style.display = "none"
+                }
+
+
+
+
+function sendToWhatsapp(){
+    let number="8270223203";
+
+    let name = document.getElementById('name').value;
+    let email = document.getElementById('email').value;
+    let message = document.getElementById('message').value;
+
+    var url = "https://wa.me/" + number + "?text="
+    + "Name : " +name+ "%0a"
+    + "Email : " +email+ "%0a"
+    + "Message : " +message+ "%0a";
+
+    window.open(url, '_blank').focus(); 
+
+    }
+
+
+</script>
+
+</body>
+</html>
