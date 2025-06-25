@@ -221,14 +221,14 @@ form{
     align-items: center;
 }
 #forms label{
-    margin-top: 20px;
+    margin-top: 10px;
     margin-bottom: 15px;
-    margin-left: -450px;
+    margin-left: -520px;
 }
 
 #forms .one{
-    width:500px;
-    height: 200px;
+    width:565px;
+    height: 225px;
     resize: none;
 }
     .form-group label {
@@ -292,12 +292,8 @@ form{
 
 
 
-.road-head{
-    text-align: center;
-    margin-bottom: 30px;
-    padding-top: 51px;
-}
-.road-cards{
+
+.cards{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -305,18 +301,15 @@ form{
     gap:40px;
     padding-top: 80px;
 }
-.road-card {
- 
-  
-}
-.road-card img{
+
+.card img{
     width:70px;
     margin-top: -40px;
     margin-left:100px;
     border-radius: 50%; 
 
 }
-.road-container {
+.cards-container {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -328,14 +321,14 @@ form{
   border-radius: 10px;
   margin-bottom: 50px;
 }
-.road-container p{
+.cards-container p{
     padding-top: 20px;
     line-height: 1.5;
     word-spacing:2px ;
     font-weight:500;
 }
 
-.road-container h2 ,h3{
+.cards-container h2 ,h3{
     padding-top: 20px;
 }
 
@@ -344,15 +337,12 @@ form{
 
 }
 
-.road-software{
-    color: #188edc;
-}
-
 
 
 
 .talk-container{
     background: #1a1919;
+    margin-top: 85px;
     padding: 100px 30px 100px 30px ;
     color: white;
     line-height: 2;
@@ -479,7 +469,7 @@ background-color: #5abed0;
     padding: 68px 69px;
 }
 
-.road-container{
+.container{
     width: 320px;
 }
 
